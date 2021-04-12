@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar using JS</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section>
+        
+            <input type="text" name="" id="MyText" placeholder="Serch here.." onkeyup="Search()">
+        <table id="myTable" >
+            <tr class="header">
+               <th>Name</th>
+               <th>Degree</th>
+               <th>Post</th>
+            </tr>
+
+                <tr>
+                    <td>Jay</td>
+                    <td>BCA</td>
+                    <td>Widget Developer</td>
+                </tr>
+                <tr>
+                    <td>Kartik</td>
+                    <td>MCA</td>
+                    <td>python Developer</td>
+                </tr>
+                <tr>
+                    <td>Abhishek</td>
+                    <td>BCS</td>
+                    <td>Full Stack Developer</td>
+                </tr>
+                <tr>
+                    <td>Atul</td>
+                    <td>MCS</td>
+                    <td>PHP Developer</td>
+                </tr>
+                <tr>
+                    <td>Sagar</td>
+                    <td>B.tech</td>
+                    <td>Web Designer</td>
+                </tr>
+                <tr>
+                    <td>Umesh</td>
+                    <td>M.tech</td>
+                    <td>Web Developer</td>
+                </tr>
+
+        </table>
+    </section>
+
+
+    <script>
+       const Search=()=>{
+           const MyText=document.getElementById('MyText').value.toUpperCase();
+
+           let myTable=document.getElementById('myTable');
+
+           let tr=myTable.getElementsByTagName('tr')
+
+           for(i=0;i<tr.length;i++){
+               let tdName=tr[i].getElementsByTagName('td')[0];//tr[i ] gives the name while td[0] gives the name of the field
+               if(tdName){
+                   let txtvalue=tdName.textContent||td.innerHTML;//to store the value ina text
+                   if(txtvalue.toUpperCase().indexOf(MyText)>-1){
+
+                    tr[i].style.display="";
+                   }else{
+                       tr[i].style.display="none"
+                   }
+               }
+           }
+           
+       }
+       /*1.refference of textbox ,teble,tr,td,td->textcontent 
+       2.for loop to iterate through the all content in table
+       3.tdname to get the table data
+       if tdname is there then textvalue is taken to save the only text of the the td
+       4.check wheather txtvakue is positive if yes then display it else none
+       */
+    </script>
+    
+    
+</body>
+</html>

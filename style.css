@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1300px;
+  height: 50vh;
+  font-size: 18px;
+}
+table {
+  text-align: center;
+  width: 100%;
+}
+#MyText {
+  width: 1000px;
+  padding: 5px;
+  margin-bottom: 1.5rem;
+  font-size: 20px;
+}
+tr {
+  line-height: 2rem;
+}
+.header {
+  background: rgb(235, 231, 231);
+}
